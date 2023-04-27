@@ -1,0 +1,117 @@
+======================
+exp
+======================
+
+1^2;
+
+---
+
+(source_file
+	(arithmetic_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+
+=====================
+unary +
+=====================
+
++1;
+
+---
+
+(source_file
+	(arithmetic_operation
+		(integer_literal)
+	)
+)
+
+=====================
+unary -
+=====================
+
+-a;
+
+---
+
+(source_file
+	(arithmetic_operation
+		(identifier)
+	)
+)
+
+=====================
+multiplication
+=====================
+
+3*4;
+
+---
+
+(source_file
+	(arithmetic_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+
+=====================
+division
+=====================
+
+3/7;
+
+---
+
+(source_file
+	(arithmetic_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+
+=====================
+mod
+=====================
+
+2 mod 3;
+
+---
+
+(source_file
+	(arithmetic_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+
+=====================
+binary +
+=====================
+
+4 + 3;
+
+---
+
+(source_file
+	(arithmetic_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+
+=====================
+binary -
+=====================
+
+4 - 3;
+
+---
+
+(source_file
+	(arithmetic_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)

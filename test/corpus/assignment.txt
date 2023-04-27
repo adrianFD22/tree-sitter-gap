@@ -1,0 +1,14 @@
+=====================
+Assignment 
+=====================
+
+a := 1;
+
+---
+
+(source_file
+	(assignment
+		(identifier)
+		(integer_literal)
+	)
+)

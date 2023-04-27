@@ -1,0 +1,11 @@
+=================
+return_statement
+=================
+
+return;
+
+---
+
+(source_file
+	(return_statement)
+)

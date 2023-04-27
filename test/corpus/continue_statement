@@ -1,0 +1,11 @@
+=================
+continue_statement
+=================
+
+continue;
+
+---
+
+(source_file
+	(continue_statement)
+)

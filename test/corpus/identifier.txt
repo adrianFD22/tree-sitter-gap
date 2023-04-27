@@ -1,0 +1,81 @@
+===================
+identifier lower
+===================
+
+adfa;
+
+---
+
+(source_file
+	(identifier)
+)
+
+===================
+identifier upper
+===================
+
+UFKAJK;
+
+---
+
+(source_file
+	(identifier)
+)
+
+===================
+identifier mixed
+===================
+
+aHaHKLadfb;
+
+---
+
+(source_file
+	(identifier)
+)
+
+======================
+identifier underscore
+======================
+
+aHaHK_Lad_fb;
+
+---
+
+(source_file
+	(identifier)
+)
+
+====================
+identifier various
+====================
+
+q;
+n;
+r;
+
+---
+
+(source_file
+	(identifier)
+	(identifier)
+	(identifier)
+)
+
+==================
+strange identifier
+==================
+
+_;
+__;
+s1_;
+sdfa@asda;
+
+---
+
+(source_file
+	(identifier)
+	(identifier)
+	(identifier)
+	(identifier)
+)

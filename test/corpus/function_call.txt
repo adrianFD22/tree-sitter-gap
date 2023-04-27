@@ -1,0 +1,19 @@
+====================
+function call
+====================
+
+IsInt(1);
+
+---
+
+(source_file
+	(function_call 
+		(identifier)
+		(integer_literal)
+	)
+)
+
+
+===================
+function split parenthesis
+===================

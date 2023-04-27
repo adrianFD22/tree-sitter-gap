@@ -1,0 +1,11 @@
+=================
+break_statement
+=================
+
+break;
+
+---
+
+(source_file
+	(break_statement)
+)

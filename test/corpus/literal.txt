@@ -1,0 +1,256 @@
+=====================
+function_literal
+=====================
+
+function ()
+end;
+
+---
+
+(source_file
+	(function_literal)
+)
+
+=====================
+integer_literal
+=====================
+
+42;
+
+---
+
+(source_file
+	(integer_literal)
+)
+
+=====================
+float_literal
+=====================
+
+1.3;
+
+---
+
+(source_file
+	(float_literal)
+)
+
+=====================
+permutation_literal
+=====================
+
+(1, 2, 3);
+
+---
+
+(source_file
+	(permutation_literal
+		(integer_literal)
+		(integer_literal)
+		(integer_literal)
+	)
+)
+
+=====================
+string_literal
+=====================
+
+"hello world";
+
+---
+
+(source_file
+	(string_literal)
+)
+
+====================
+strange strings
+====================
+
+"";
+"\n";
+"\\";
+"\"";
+
+---
+
+(source_file
+	(string_literal)
+	(string_literal)
+	(string_literal)
+	(string_literal)
+)
+
+=====================
+character_literal
+=====================
+
+'h';
+
+---
+
+(source_file
+	(character_literal)
+)
+
+=====================
+strange characters
+=====================
+
+'\n';
+' ';
+'\\';
+'\'';
+
+---
+
+(source_file
+	(character_literal)
+	(character_literal)
+	(character_literal)
+	(character_literal)
+)
+
+=====================
+list_literal
+=====================
+
+[1, 2, 3];
+[1..3];
+
+---
+
+(source_file
+	(list_literal
+		(integer_literal)
+		(integer_literal)
+		(integer_literal)
+	)
+	(list_literal
+		(integer_literal)
+		(integer_literal)
+	)
+)
+
+=====================
+record_literal
+=====================
+
+rec();  
+rec(a:=1, b := Print);
+
+---
+
+(source_file
+	(record_literal)
+	(record_literal
+		(identifier)
+		(integer_literal)
+		(identifier)
+		(identifier)
+	)
+)
+
+===========================
+function split parenthesis
+===========================
+
+
+function (a)
+end;
+
+---
+
+(source_file
+	(function_literal
+		(identifier)
+	)
+)
+
+=========================
+function lambda
+=========================
+
+{x} -> Print(x);
+x -> Print(x);
+
+---
+
+(source_file
+	(function_literal
+		(identifier)
+		(function_call
+			(identifier)
+			(identifier)
+		)
+	)
+	(function_literal
+		(identifier)
+		(function_call
+			(identifier)
+			(identifier)
+		)
+	)
+)
+
+=========================================
+lambda function inside function call
+=========================================
+
+DoSomething({x} -> Print(x));
+
+---
+
+(source_file
+	(function_call
+		(identifier)
+		(function_literal
+			(identifier)
+			(function_call
+				(identifier)
+				(identifier)
+			)
+		)
+	)
+)
+
+=================================
+lambda function with comparision
+=================================
+
+x -> Int("2") < 2;
+
+---
+
+(source_file
+	(function_literal
+		(identifier)
+		(comparison_operation
+			(function_call
+				(identifier)
+				(string_literal)
+			)
+			(integer_literal)
+		)
+	)
+)
+
+============================
+function literal mixed
+============================
+
+# A comment
+
+function(a, b)
+end;
+
+---
+
+(source_file
+	(comment)
+	(function_literal
+		(identifier)
+		(identifier)
+	)
+)
+

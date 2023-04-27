@@ -1,0 +1,210 @@
+================
+If statement
+================
+
+if is_true then
+	Print("hello");
+	Print("world");
+fi;
+
+---
+
+(source_file
+	(conditional
+		(if_statement
+			(identifier)
+			(function_call
+				(identifier)
+				(string_literal)
+			)
+			(function_call
+				(identifier)
+				(string_literal)
+			)
+		)
+	)
+)
+
+================
+elif statement
+================
+
+if is_true then 
+	QuoInt(1, 3);
+elif is_true then 
+	QuoInt(3, 3);
+elif is_false then
+	Print("something");
+fi;
+
+---
+
+(source_file
+	(conditional
+		(if_statement
+			(identifier)
+			(function_call
+				(identifier)
+				(integer_literal)
+				(integer_literal)
+			)
+		)
+		(elif_statement
+			(identifier)
+			(function_call
+				(identifier)
+				(integer_literal)
+				(integer_literal)
+			)
+		)
+		(elif_statement
+			(identifier)
+			(function_call
+				(identifier)
+				(string_literal)
+			)
+		)
+	)
+)
+
+================
+else statement
+================
+
+if is_true then 
+	Print();
+	Print();
+elif is_true then 
+	Print();
+else
+	Print();
+	Print();
+fi;
+
+---
+
+(source_file
+	(conditional
+		(if_statement
+			(identifier)
+			(function_call
+				(identifier)
+			)
+			(function_call
+				(identifier)
+			)
+		)
+		(elif_statement
+			(identifier)
+			(function_call
+				(identifier)
+			)
+		)
+		(else_statement
+			(function_call
+				(identifier)
+			)
+			(function_call
+				(identifier)
+			)
+		)
+	)
+)
+
+
+===============
+if 2
+===============
+
+if ExampleFunc() = 0 and false then
+	a := [];
+fi;
+
+---
+
+(source_file
+	(conditional
+		(if_statement
+			(logical_operation
+				(comparison_operation
+					(function_call
+						(identifier)
+					)
+					(integer_literal)
+				)
+				(boolean_literal)
+			)
+			(assignment
+				(identifier)
+				(list_literal)
+			)
+		)
+	)
+)
+
+===============
+if 3
+===============
+
+if elements[first] = 4.0 and condition[0] then
+fi;
+
+---
+
+(source_file
+	(conditional
+		(if_statement
+			(logical_operation
+				(comparison_operation
+					(list_element
+						(identifier)
+						(identifier)
+					)
+					(float_literal)
+				)
+				(list_element
+					(identifier)
+					(integer_literal)
+				)
+			)
+		)
+	)
+)
+
+================
+if 4 
+================
+
+if Length(more) <> 0 and more[1] then
+	pack := [];
+fi;
+
+---
+
+(source_file
+	(conditional
+		(if_statement
+			(logical_operation
+				(comparison_operation
+					(function_call
+						(identifier)
+						(identifier)
+					)
+					(integer_literal)
+				)
+				(list_element
+					(identifier)
+					(integer_literal)
+				)
+			)
+			(assignment
+				(identifier)
+				(list_literal)
+			)
+		)
+	)
+)
+
+
+
+

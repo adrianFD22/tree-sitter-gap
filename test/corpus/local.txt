@@ -1,0 +1,38 @@
+===================
+single local
+===================
+
+function()
+	local a;
+end;
+
+---
+
+(source_file
+	(function_literal
+		(local_declaration
+			(identifier)
+		)
+	)
+)
+
+
+===================
+various locals
+===================
+
+function()
+	local a, b, c;
+end;
+
+---
+
+(source_file
+	(function_literal
+		(local_declaration
+			(identifier)
+			(identifier)
+			(identifier)
+		)
+	)
+)

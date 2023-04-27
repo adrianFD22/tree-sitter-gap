@@ -1,0 +1,14 @@
+=================
+while_loop
+=================
+
+while is_true do
+od;
+
+---
+
+(source_file
+	(while_loop
+		(identifier)
+	)
+)

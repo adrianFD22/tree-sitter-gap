@@ -1,0 +1,15 @@
+==============
+for_loop
+==============
+
+for i in some_array do
+od;
+
+---
+
+(source_file
+	(for_loop
+		(identifier)
+		(identifier)
+	)
+)

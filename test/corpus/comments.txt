@@ -1,0 +1,92 @@
+================
+single comment
+================
+
+# This is some comment
+
+---
+
+(source_file
+	(comment)
+)
+
+
+=================
+two comments
+=================
+
+# A comment
+## Another
+
+---
+
+(source_file
+	(comment)
+	(comment)
+)
+
+========================
+comment inside function
+========================
+
+function ()
+#asd
+end;
+
+---
+
+(source_file
+	(function_literal
+		(comment)
+	)
+)
+
+=======================
+comment after statement
+=======================
+
+q := 1; # This is useful
+
+---
+
+(source_file
+	(assignment
+		(identifier)
+		(integer_literal)
+	)
+	(comment)
+)
+
+======================
+strange comments
+======================
+
+function #
+( #
+a #
+, #
+b) #asdfa
+#asdfkja
+local #asdf
+c;
+end; ##asdfadf
+
+---
+
+(source_file
+	(function_literal
+		(comment)
+		(comment)
+		(identifier)
+		(comment)
+		(comment)
+		(identifier)
+		(comment)
+		(comment)
+		(local_declaration
+			(comment)
+			(identifier)
+		)
+	)
+	(comment)
+)

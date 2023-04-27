@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-gap",
+  "version": "1.0.0",
+  "description": "A simple parser for the GAP programming language",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrián Fidalgo-Díaz",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "tree-sitter": [
+	  {
+	  	"scope": "source.g",
+		"file-types": [
+			"g"
+		],
+
+		"highlights": [
+			"queries/highlights.scm"
+		]
+
+	  }
+  ]
+}

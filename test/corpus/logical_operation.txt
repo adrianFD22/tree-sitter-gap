@@ -1,0 +1,45 @@
+=================
+not
+=================
+
+not true;
+
+---
+
+(source_file
+	(logical_operation
+		(boolean_literal)
+	)
+)
+
+=================
+and
+=================
+
+is_true and fail;
+
+---
+
+(source_file
+	(logical_operation
+		(identifier)
+		(boolean_literal)
+	)
+)
+
+
+=================
+or
+=================
+
+4 or 5;
+
+---
+
+(source_file
+	(logical_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+

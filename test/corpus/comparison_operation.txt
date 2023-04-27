@@ -1,0 +1,84 @@
+========================
+equal
+========================
+
+1=2;
+
+---
+
+(source_file
+	(comparison_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+
+========================
+not equal
+========================
+
+1<>"9";
+
+---
+
+(source_file
+	(comparison_operation
+		(integer_literal)
+		(string_literal)
+	)
+)
+
+========================
+lower than
+========================
+
+3 <8;
+---
+
+(source_file
+	(comparison_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+========================
+greater than
+========================
+
+4>g;
+
+---
+
+(source_file
+	(comparison_operation
+		(integer_literal)
+		(identifier)
+	)
+)
+========================
+lower or equal than
+========================
+
+3 <= 3;
+---
+
+(source_file
+	(comparison_operation
+		(integer_literal)
+		(integer_literal)
+	)
+)
+========================
+greater or equal than 
+========================
+
+a >= 2;
+
+---
+
+(source_file
+	(comparison_operation
+		(identifier)
+		(integer_literal)
+	)
+)
