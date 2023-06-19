@@ -13,7 +13,3 @@ IsInt(1);
 	)
 )
 
-
-===================
-function split parenthesis
-===================
