@@ -1,6 +1,6 @@
 # tree-sitter-gap
 
-A tree-sitter parser for GAP.
+A tree-sitter parser for GAP. This is just my personal gap parser that I use. There is some features missing but it is pretty runnable.
 
 - TO DO things:
     - Finish writing the syntax
@@ -10,11 +10,11 @@ A tree-sitter parser for GAP.
             - Info
             - IsBound
             - QUIT
+            - quit
             - TryNextMethod
             - Unbind
             - atomic
             - local
-            - quit
             - readonly
             - readwrite
         - Fix the parsing of the {} operator over lists.
